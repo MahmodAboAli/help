@@ -42,6 +42,7 @@ class MyOrders extends StatelessWidget {
           Text(
             "Order #${card.numb}",
             style: TextStyle(
+                fontFamily: "DM Sans",
                 fontSize: 8.sp,
                 fontWeight: FontWeight.bold,
                 shadows: [
@@ -62,18 +63,23 @@ class MyOrders extends StatelessWidget {
                   children: [
                     Text(
                       "Order date",
-                      style:
-                          TextStyle(color: Color(0xFF828282), fontSize: 6.sp),
+                      style: TextStyle(
+                          fontFamily: 'Tenor Sans',
+                          color: Color(0xFF828282),
+                          fontSize: 5.5.sp),
                     ),
                     SizedBox(
                       width: 2.w,
                     ),
                     Text(
                       "${card.orderDate.day}/${card.orderDate.month}/${card.orderDate.year}",
-                      style: TextStyle(color: Colors.black, fontSize: 6.sp),
+                      style: TextStyle(color: Colors.black, fontSize: 5.sp),
                     ),
                   ],
                 ),
+              ),
+              SizedBox(
+                width: 2.w,
               ),
               Expanded(
                 // flex: 4,
@@ -81,15 +87,17 @@ class MyOrders extends StatelessWidget {
                   children: [
                     Text(
                       "due date",
-                      style:
-                          TextStyle(color: Color(0xFF828282), fontSize: 6.sp),
+                      style: TextStyle(
+                          fontFamily: 'Tenor Sans',
+                          color: Color(0xFF828282),
+                          fontSize: 5.5.sp),
                     ),
                     SizedBox(
                       width: 2.w,
                     ),
                     Text(
                       "${card.dueDate.day}/${card.dueDate.month}/${card.dueDate.year}",
-                      style: TextStyle(color: Colors.black, fontSize: 6.sp),
+                      style: TextStyle(color: Colors.black, fontSize: 5.sp),
                     ),
                   ],
                 ),
@@ -108,17 +116,22 @@ class MyOrders extends StatelessWidget {
                   children: [
                     const Text(
                       "Quantity:",
-                      style: TextStyle(color: Color(0xFF828282)),
+                      style: TextStyle(
+                          fontFamily: 'Tenor Sans', color: Color(0xFF828282)),
                     ),
                     SizedBox(
                       width: 2.w,
                     ),
                     Text(
                       "${card.Quantity}",
-                      style: const TextStyle(color: Colors.black),
+                      style: const TextStyle(
+                          fontFamily: 'Tenor Sans', color: Colors.black),
                     ),
                   ],
                 ),
+              ),
+              SizedBox(
+                width: 2.w,
               ),
               Expanded(
                 // flex: 4,
@@ -126,14 +139,16 @@ class MyOrders extends StatelessWidget {
                   children: [
                     const Text(
                       "Subtotal",
-                      style: TextStyle(color: Color(0xFF828282)),
+                      style: TextStyle(
+                          fontFamily: 'Tenor Sans', color: Color(0xFF828282)),
                     ),
                     SizedBox(
                       width: 2.w,
                     ),
                     Text(
                       "${card.Subtotal}\$",
-                      style: const TextStyle(color: Colors.black),
+                      style: const TextStyle(
+                          fontFamily: 'Tenor Sans', color: Colors.black),
                     ),
                   ],
                 ),
@@ -147,14 +162,16 @@ class MyOrders extends StatelessWidget {
             children: [
               const Text(
                 "Tracking number:",
-                style: TextStyle(color: Color(0xFF828282)),
+                style: TextStyle(
+                    fontFamily: 'Tenor Sans', color: Color(0xFF828282)),
               ),
               SizedBox(
                 width: 2.w,
               ),
               Text(
                 "${card.TrackingNumber}",
-                style: const TextStyle(color: Colors.black),
+                style: const TextStyle(
+                    fontFamily: 'Tenor Sans', color: Colors.black),
               ),
             ],
           ),
@@ -167,6 +184,7 @@ class MyOrders extends StatelessWidget {
               Text(
                 card.KingOfOrder,
                 style: TextStyle(
+                    fontFamily: 'Tenor Sans',
                     color: card.KingOfOrder == "Pending"
                         ? Color(0xFFD57676)
                         : Color(0xFF76D5AD),
@@ -184,7 +202,12 @@ class MyOrders extends StatelessWidget {
                           color: Colors.black.withOpacity(.25))
                     ],
                     border: Border.all(color: const Color(0xFF434343))),
-                child: const Text("Details"),
+                child: const Text(
+                  "Details",
+                  style: TextStyle(
+                    fontFamily: 'Tenor Sans',
+                  ),
+                ),
               )
             ],
           )
@@ -331,6 +354,7 @@ class MyOrders extends StatelessWidget {
                               "Pending",
                               textAlign: TextAlign.center,
                               style: TextStyle(
+                                  fontFamily: "DM Sans",
                                   fontSize: 10.sp,
                                   color: cubit.kindOfOrder == "Pending"
                                       ? const Color(0xFF3D3D3D)
@@ -361,6 +385,7 @@ class MyOrders extends StatelessWidget {
                               "Delivered",
                               textAlign: TextAlign.center,
                               style: TextStyle(
+                                  fontFamily: "DM Sans",
                                   fontSize: 10.sp,
                                   color: cubit.kindOfOrder == "Delivered"
                                       ? const Color(0xFF3D3D3D)
