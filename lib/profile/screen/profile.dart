@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sanadprojecttest/profile/screen/personal_details_screen.dart';
 import 'package:sizer_pro/sizer.dart';
 
 class Profile extends StatelessWidget {
@@ -38,7 +39,11 @@ class Profile extends StatelessWidget {
                   border: Border.all(width: 1, color: const Color(0xFFC9C9C9))),
               child: Column(children: [
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => PersonalDetails(),
+                    ));
+                  },
                   leading: Container(
                     decoration: BoxDecoration(
                         color: const Color(0xFFECECEC),
@@ -194,12 +199,18 @@ class Profile extends StatelessWidget {
               height: 3.h,
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 38.w, vertical: 1.6.h),
+              margin: EdgeInsets.symmetric(horizontal: 8.w),
+              width: double.infinity,
+              padding: EdgeInsets.symmetric(vertical: 2.h),
               decoration: BoxDecoration(
                   color: Colors.black, borderRadius: BorderRadius.circular(10)),
               child: const Text(
                 "Log Out",
-                style: TextStyle(color: Colors.white),
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "DM Sans"),
               ),
             ),
             SizedBox(

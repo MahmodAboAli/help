@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sanadprojecttest/Elegance/cubit/sreach_cubit.dart';
 import 'package:sanadprojecttest/Elegance/orders/cubit/orders_cubit.dart';
-import 'package:sanadprojecttest/Elegance/orders/orders.dart';
-import 'package:sanadprojecttest/profile/profile.dart';
+import 'package:sanadprojecttest/Elegance/orders/screen/orders.dart';
+import 'package:sanadprojecttest/profile/screen/profile.dart';
 import 'package:sizer_pro/sizer.dart';
 
 void main() {
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
           useMaterial3: true,
         ),
-        home: const MyOrders(),
+        home: const Profile(),
       ),
     );
   }
